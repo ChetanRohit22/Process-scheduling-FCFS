@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FCFS CPU Scheduling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FCFS CPU Scheduling</h1>
+        
+        <div class="input-section">
+            <div class="process-input">
+                <input type="text" id="pid" placeholder="Process" value="P1">
+                <input type="number" id="arrival" placeholder="Arrival" value="0">
+                <input type="number" id="burst" placeholder="Burst" value="3">
+                <button onclick="addProcess()">Add Process</button>
+            </div>
+            <div id="process-list"></div>
+            <button onclick="calculateFCFS()">Run FCFS</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        
+        <div class="output-section">
+            <h2>Gantt Chart</h2>
+            <div id="gantt-chart"></div>
+            
+            <h2>Performance Metrics</h2>
+            <table id="metrics">
+                <tr>
+                    <th>Process</th>
+                    <th>Arrival</th>
+                    <th>Burst</th>
+                    <th>Finish</th>
+                    <th>Turnaround</th>
+                    <th>Waiting</th>
+                </tr>
+            </table>
+            <div id="averages"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
